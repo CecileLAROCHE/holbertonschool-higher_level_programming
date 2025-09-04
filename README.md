@@ -1,3 +1,7 @@
-# Python - Hello, World
+# Python
 
-# Python - if/else, loops, functions
+## Python - Hello, World
+
+## Python - if/else, loops, functions
+
+## Python - import & modules
