@@ -9,3 +9,5 @@
 ## Python - Data Structures: Lists, Tuples
 
 ## Python - More Data Structures: Set, Dictionary
+
+## Python - Exceptions
