@@ -5,23 +5,32 @@
 # Cas simples avec des entiers
 >>> add_integer(5, 10)
 15
+
 >>> add_integer(5)
 103
+
 >>> add_integer(-3, 7)
 4
 
 # Cas avec des flottants (doivent être convertis en int)
 >>> add_integer(3.9, 2)
 5
+
 >>> add_integer(10, -2.8)
 8
 
 # Cas avec erreurs (doit lever TypeError)
 >>> add_integer("5", 10)
 TypeError: a must be an integer
+
 >>> add_integer(5, "10")
 TypeError: b must be an integer
+
 >>> add_integer(None, 3)
 TypeError: a must be an integer
+
 >>> add_integer([1, 2], 3)
 TypeError: a must be an integer
+
+>>> add_integer(1e999, 1e999)
+OverflowError
