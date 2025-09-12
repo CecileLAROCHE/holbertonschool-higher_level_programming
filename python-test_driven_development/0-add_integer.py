@@ -5,6 +5,7 @@ Module qui fournit une fonction add_integer.
 Cette fonction permet d’additionner deux entiers.
 """
 
+
 def add_integer(a, b=98):
     """
     Additionne deux entiers.
