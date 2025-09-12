@@ -1,0 +1,19 @@
+# Tests de la fonction add\_integer
+
+# Cas simples avec des entiers
+
+add\_integer(5, 10) → 15
+add\_integer(5) → 103
+add\_integer(-3, 7) → 4
+
+# Cas avec des flottants (doivent être convertis en int)
+
+add\_integer(3.9, 2) → 5
+add\_integer(10, -2.8) → 8
+
+# Cas avec erreurs (doit lever TypeError)
+
+add\_integer("5", 10) → TypeError: a must be an integer
+add\_integer(5, "10") → TypeError: b must be an integer
+add\_integer(None, 3) → TypeError: a must be an integer
+add\_integer(\[1, 2], 3) → TypeError: a must be an integer
