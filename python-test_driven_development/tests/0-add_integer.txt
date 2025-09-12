@@ -17,16 +17,26 @@
 8
 
 >>> add_integer("5", 10)
+Traceback (most recent call last):
+  ...
 TypeError: a must be an integer
 
 >>> add_integer(5, "10")
+Traceback (most recent call last):
+  ...
 TypeError: b must be an integer
 
 >>> add_integer(None, 3)
+Traceback (most recent call last):
+  ...
 TypeError: a must be an integer
 
 >>> add_integer([1, 2], 3)
+Traceback (most recent call last):
+  ...
 TypeError: a must be an integer
 
 >>> add_integer(1e999, 1e999)
-OverflowError
+Traceback (most recent call last):
+  ...
+OverflowError: cannot convert float infinity to integer
