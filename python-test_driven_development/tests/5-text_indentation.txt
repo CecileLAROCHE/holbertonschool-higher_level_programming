@@ -1,0 +1,13 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("I do. not like: work saturday!")
+I do.
+<BLANKLINE>
+not like:
+<BLANKLINE>
+work saturday!
+
+>>> text_indentation(123)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
