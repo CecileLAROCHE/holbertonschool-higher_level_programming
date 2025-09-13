@@ -1,31 +1,16 @@
-#!/usr/bin/python3
-
-"""
-Module qui fournit une fonction text_indentation
-Cette fonction permet de couper le texte
-"""
-
 def text_indentation(text):
-    """
-    Imprime un texte avec deux sauts de ligne après
-    chaque '.', '?', ':'
-    Supprime les espaces au début et à la fin de chaque ligne.
-    """
-
+    """function that print text and 2 newlines after "." ":" and "?" chars"""
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-
-    phrase = ""
-
-    for char in text:
-        phrase += char
-        if char in ".:?":
-            clean_phrase = phrase.strip()
-            print(clean_phrase)
-            print()  # saut de ligne pour <BLANKLINE>
-            phrase = ""
-
-    # Si le texte ne finit pas par un séparateur
-    if phrase.strip():
-        clean_phrase = phrase.strip()
-        print(clean_phrase)
+    counter = 0
+    for idx in range(0, len(text)):
+        if text[idx] != " ":
+            counter = 0
+        if text[idx] == " " and counter != 0:
+            continue
+        print(text[idx], end="")
+        if text[idx] in [".", ":", "?"]:
+            print()
+            print()
+            counter += 1
+            
