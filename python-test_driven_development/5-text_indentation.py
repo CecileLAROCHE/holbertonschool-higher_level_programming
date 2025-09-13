@@ -7,6 +7,10 @@ with 2 newlines after "." ":" and "?" characters
 
 def text_indentation(text):
     """Print text with 2 newlines after '.', ':', '?'"""
+
+    if not isinstance(text, str):
+        raise TypeError("text must be a string")
+
     i = 0
     start = 0
     while i < len(text):
