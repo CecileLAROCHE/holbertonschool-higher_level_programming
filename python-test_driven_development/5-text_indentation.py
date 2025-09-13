@@ -29,3 +29,7 @@ def text_indentation(text):
             print()  # saut de ligne supplémentaire pour <BLANKLINE>
             phrase = ""
             counter = 1  # commencer à ignorer les espaces consécutifs
+
+# imprimer la dernière phrase si elle ne se termine pas par un séparateur
+    if phrase.strip():
+        print(phrase.strip())
