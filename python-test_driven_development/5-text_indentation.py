@@ -6,17 +6,26 @@ with 2 newlines after "." ":" and "?" characters
 
 
 def text_indentation(text):
-    """function that prints text with 2 newlines after '.', ':' and '?'"""
+    """Print text with 2 newlines after '.', ':', '?'"""
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
+    counter = 0
     phrase = ""
-    for char in text:
-        phrase += char
-        if char in ".:?":
-            print(phrase.strip())
-            print()
-            phrase = ""
 
-    if phrase.strip():
-        print(phrase.strip())
+    for char in text:
+        # ignorer les espaces en début de phrase
+        if char != " ":
+            counter = 0
+
+        if char == " " and counter != 0:
+            continue
+
+        phrase += char
+
+        # si on rencontre un séparateur
+        if char in [".", ":", "?"]:
+            print(phrase.strip())  # supprime les espaces au début et à la fin
+            print()  # saut de ligne supplémentaire pour <BLANKLINE>
+            phrase = ""
+            counter = 1  # commencer à ignorer les espaces consécutifs
