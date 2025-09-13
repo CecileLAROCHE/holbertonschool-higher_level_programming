@@ -1,0 +1,23 @@
+>>> print_square(size) = __import__('4-print_square').matrix_divided
+
+>>> print_square(4)
+####
+####
+####
+####
+
+>>> print_square(0)
+
+
+>>> print_square()
+
+
+>>> print_square("deux")
+Traceback (most recent call last):
+  ...
+TypeError: size must be an integer
+
+>>>  print_square(-1)
+Traceback (most recent call last):
+  ...
+TypeError: size must be >= 0
