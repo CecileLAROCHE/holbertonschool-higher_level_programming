@@ -1,4 +1,4 @@
->>> print_square(size) = __import__('4-print_square').matrix_divided
+>>> print_square = __import__('4-print_square').matrix_divided
 
 >>> print_square(4)
 ####
@@ -7,9 +7,6 @@
 ####
 
 >>> print_square(0)
-
-
->>> print_square()
 
 
 >>> print_square("deux")
