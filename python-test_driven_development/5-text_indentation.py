@@ -5,19 +5,20 @@ with 2 newlines after "." ":" and "?" characters
 """
 
 
-
 def text_indentation(text):
-    """function that print text and 2 newlines after "." ":" and "?" chars"""
+    """function that prints text with 2 newlines after '.', ':' and '?'"""
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-    counter = 0
-    for idx in range(0, len(text)):
-        if text[idx] != " ":
-            counter = 0
-        if text[idx] == " " and counter != 0:
-            continue
-        print(text[idx], end="")
-        if text[idx] in [".", ":", "?"]:
-            print()
-            print()
-            counter += 1
+
+    phrase = ""
+    for char in text:
+        phrase += char
+        if char in [".", ":", "?"]:
+            # supprimer les espaces au début/fin de la phrase
+            print(phrase.strip())
+            print()  # deuxième saut de ligne
+            phrase = ""
+
+    # imprimer le reste si le texte ne finit pas par un séparateur
+    if phrase.strip():
+        print(phrase.strip())
