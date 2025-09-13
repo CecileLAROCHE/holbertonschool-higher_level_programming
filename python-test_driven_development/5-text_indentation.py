@@ -21,10 +21,14 @@ def text_indentation(text):
         phrase += char
         if char in ".:?":
             clean_phrase = phrase.strip()
+
+            print("DEBUG repr:", repr(clean_phrase))
+
             print(clean_phrase)
             print()
             phrase = ""
 
     if phrase.strip():
         clean_phrase = phrase.strip()
+        print("DEBUG repr:", repr(clean_phrase))
         print(clean_phrase)
