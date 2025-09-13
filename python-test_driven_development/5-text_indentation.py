@@ -1,3 +1,11 @@
+#!/usr/bin/python3
+"""
+This module contains a fonction that print some text
+with 2 newlines after "." ":" and "?" characters
+"""
+
+
+
 def text_indentation(text):
     """function that print text and 2 newlines after "." ":" and "?" chars"""
     if not isinstance(text, str):
@@ -13,4 +21,3 @@ def text_indentation(text):
             print()
             print()
             counter += 1
-            
