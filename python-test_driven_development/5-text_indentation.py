@@ -13,12 +13,10 @@ def text_indentation(text):
     phrase = ""
     for char in text:
         phrase += char
-        if char in [".", ":", "?"]:
-            # supprimer les espaces au début/fin de la phrase
+        if char in ".:?":
             print(phrase.strip())
-            print()  # deuxième saut de ligne
+            print()
             phrase = ""
 
-    # imprimer le reste si le texte ne finit pas par un séparateur
     if phrase.strip():
         print(phrase.strip())
