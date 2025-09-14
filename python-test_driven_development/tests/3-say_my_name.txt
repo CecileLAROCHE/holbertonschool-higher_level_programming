@@ -10,10 +10,6 @@ My name is Walter White
 My name is Bob 
 
 >>> say_my_name(12, "White")
-
-first_name must be a string
-
-
-
-except Exception as e:
-    print(e)
+Traceback (most recent call last):
+  ...
+TypeError: first_name must be a string
