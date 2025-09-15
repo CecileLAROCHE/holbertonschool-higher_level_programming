@@ -6,13 +6,14 @@ this module do a class Square that defines a square by: (based on 0-square.py)
 
 class Square:
     """
-    Classe représentant un carré.
+    This class defines a square based on it's private attribute
+    size. Size is private to ensure better control of the square.
 
-    Attribut privé:
-        __size (int/float): la taille du côté du carré.
-    
-    L'attribut est privé pour pouvoir contrôler son accès et sa modification
-    dans les futures étapes (validation du type et de la valeur).
+    Args:
+        size: The size of the square
+
+    Attributes:
+        size: The size of the square
     """
     
     def __init__(self, size):
