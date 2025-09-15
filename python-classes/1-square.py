@@ -15,6 +15,7 @@ class Square:
     Attributes:
         size: The size of the square
     """
-    
     def __init__(self, size):
+        if size is None or not isinstance(size, int):
+            raise AttributeError("'Square' object has no attribute 'size'")
         self.__size = size
