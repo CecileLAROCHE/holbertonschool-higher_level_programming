@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """"
 this module do an empty class Square that defines a square:
 """
