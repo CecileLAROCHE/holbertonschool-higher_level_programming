@@ -1,19 +1,18 @@
 #!/usr/bin/python3
-""""
+"""
 this module do a class Square that defines a square by: (based on 0-square.py)
 """
 
 
 class Square:
     """
-    This class defines a square based on it's private attribute
-    size. Size is private to ensure better control of the square.
+    This class defines a square with a private attribute __size.
 
     Args:
-        size: The size of the square
+        size (int): The size of the square's side (default is 0).
 
     Attributes:
-        size: The size of the square
+        __size (int): Size of the square's side (private)
     """
     def __init__(self, size=0):
         if not isinstance(size, int):
@@ -23,7 +22,7 @@ class Square:
 
         self.__size = size
         
-        
     def area(self):
+        """Returns the area of the square."""
         return self.__size ** 2
         
