@@ -9,11 +9,12 @@ class Rectangle:
         This is a Rectangle
 
     Args:
-        width
-        height
+        width (int): largeur du rectangle (>= 0)
+        height (int): hauteur du rectangle (>= 0)
 
     Attributes:
-        None
+       __width (int): largeur privée du rectangle
+        __height (int): hauteur privée du rectangle
     """
 
     def __init__(self, width=0, height=0):
@@ -56,4 +57,7 @@ class Rectangle:
         """
         Returns the perimeter of the rectangle
         """
-        return (self.__height * 2) + (self.__width * 2)
+        if self.__width == 0 or self.__height == 0:
+            return 0
+        else:
+            return (self.__height * 2) + (self.__width * 2)
