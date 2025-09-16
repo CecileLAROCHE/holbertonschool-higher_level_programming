@@ -82,4 +82,4 @@ class Rectangle:
         """
         Rectangle is deleted
         """
-        print(  "Bye rectangle...")
+        print("Bye rectangle...")
