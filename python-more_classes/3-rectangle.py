@@ -13,7 +13,7 @@ class Rectangle:
         height (int): hauteur du rectangle (>= 0)
 
     Attributes:
-       __width (int): largeur privée du rectangle
+        __width (int): largeur privée du rectangle
         __height (int): hauteur privée du rectangle
     """
 
