@@ -26,7 +26,7 @@ class Square:
     @size.setter
     def size(self, value):
         """Setter : vérifie et assigne la taille"""
-        if not isinstance(value, int, float):
+        if not isinstance(value, (int, float)):
             raise TypeError("size must be a number")
         if value < 0:
             raise ValueError("size must be >= 0")
@@ -40,24 +40,36 @@ class Square:
 
     def __eq__(self, other):
         """== based on area"""
-        pass
+        if not isinstance(other, Square):
+            return NotImplemented
+        return self.area() == other.area()
 
     def __ne__(self, other):
         """!= based on area"""
-        pass
+        if not isinstance(other, Square):
+            return NotImplemented
+        return self.area() != other.area()
 
     def __lt__(self, other):
         """< based on area"""
-        pass
+        if not isinstance(other, Square):
+            return NotImplemented
+        return self.area() < other.area()
 
     def __le__(self, other):
         """<= based on area"""
-        pass
+        if not isinstance(other, Square):
+            return NotImplemented
+        return self.area() <= other.area()
 
     def __gt__(self, other):
         """> based on area"""
-        pass
+        if not isinstance(other, Square):
+            return NotImplemented
+        return self.area() > other.area()
 
     def __ge__(self, other):
         """>= based on area"""
-        pass
+        if not isinstance(other, Square):
+            return NotImplemented
+        return self.area() >= other.area()
