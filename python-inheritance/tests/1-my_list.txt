@@ -1,4 +1,4 @@
->>> print_sorted = __import__('1-my_list').print_sorted
+>>> MyList = __import__('1-my_list').MyList
 
 >>> l = MyList([3, 1, 2])
 >>> l.print_sorted()
