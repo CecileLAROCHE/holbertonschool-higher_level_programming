@@ -1,0 +1,38 @@
+>>> print_sorted = __import__('1-my_list').print_sorted
+
+>>> l = MyList([3, 1, 2])
+>>> l.print_sorted()
+[1, 2, 3]
+>>> l
+[3, 1, 2]
+
+>>> l2 = MyList([5, 4, 3, 2, 1])
+>>> l2.print_sorted()
+[1, 2, 3, 4, 5]
+
+>>> l3 = MyList([1, 2, 3])
+>>> l3.print_sorted()
+[1, 2, 3]
+
+>>> l4 = MyList([4, 2, 4, 1])
+>>> l4.print_sorted()
+[1, 2, 4, 4]
+
+>>> l5 = MyList([])
+>>> l5.print_sorted()
+[]
+
+>>> l6 = MyList([10, 20])
+>>> l6.append(5)
+>>> l6
+[10, 20, 5]
+>>> l6.print_sorted()
+[5, 10, 20]
+
+>>> l7 = MyList([3, 0])
+>>> l7.append(-7)
+>>> l7.append(-1)
+>>> l7
+[3, 0, -7, -1]
+>>> l7.print_sorted()
+[-7, -1, 0, 3]
