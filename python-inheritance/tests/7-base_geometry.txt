@@ -2,7 +2,6 @@
 
 >>> bg = BaseGeometry()
 
-
 >>> bg.area()
 Traceback (most recent call last):
 ...
