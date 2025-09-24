@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-this module do an empty class BaseGeometry
+this module do a class BaseGeometry (based on 6-base_geometry.py).
 """
 
 
@@ -23,7 +23,7 @@ class BaseGeometry:
         """
         Validates that value is a positive integer
         """
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError(f"{name} must be an integer")
         if value <= 0:
             raise ValueError(f"{name} must be greater than 0")
