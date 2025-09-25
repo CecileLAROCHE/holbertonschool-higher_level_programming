@@ -28,7 +28,7 @@ class Circle(Shape):
         """
         Initialize a circle with a radius
         """
-        self.__radius = radius
+        self.__radius = abs(radius)
 
     def area(self):
         return math.pi * (self.__radius ** 2)
