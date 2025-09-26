@@ -6,8 +6,8 @@ This module defines the CountedIterator class
 
 class CountedIterator():
     def __init__(self, iterable):
-        self.iterator = iter(iterable)
-        self.count = 0
+        self.__iterable = iter(iterable)
+        self.__count = 0
 
     def __next__(self):
         item = next(self.__iterable)
