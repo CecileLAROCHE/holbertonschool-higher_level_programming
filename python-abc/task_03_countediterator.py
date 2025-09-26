@@ -4,7 +4,7 @@ This module defines the CountedIterator class
 """
 
 
-class CountedIterator:
+class CountedIterator():
     def __init__(self, iterable):
         self.iterator = iter(iterable)
         self.count = 0
