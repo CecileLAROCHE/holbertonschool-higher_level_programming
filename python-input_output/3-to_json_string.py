@@ -1,9 +1,13 @@
 #!/usr/bin/python3
+import json
 """
-Module contenant une fonction pour écrire une chaîne de caractères
-à la fin d'un fichier texte en UTF-8.
+This module contains a function that turns an object into a string
+representation
 """
-json.dumps()
 
 
 def to_json_string(my_obj):
+    """
+    Convert an object into a string representation
+    """
+    return json.dumps(my_obj)
