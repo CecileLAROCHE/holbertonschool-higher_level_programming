@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-This module contains a function that turns JSON string to Object
+This module contains a function that converts
+a JSON string into a Python object.
 """
 
 import json
@@ -8,6 +9,6 @@ import json
 
 def from_json_string(my_str):
     """
-    Convert an object into a JSON string to Object
+    Convert a JSON string into a Python object.
     """
-    return json.dumps(my_str)
+    return json.loads(my_str)
