@@ -5,6 +5,12 @@ Module qui contient une fonction pour générer le triangle de Pascal
 
 
 def pascal_triangle(n):
+    """
+    Retourne une liste de listes représentant le triangle de Pascal
+    pour n lignes. Chaque ligne est une liste d'entiers.
+    Retourne une liste vide si n <= 0.
+    """
+
     if n <= 0:
         return []
 

@@ -14,6 +14,11 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
+        """
+        Retourne un dictionnaire représentant l'instance.
+        Si attrs est une liste de chaînes, ne renvoie que les attributs listés.
+        Sinon, renvoie tous les attributs.
+        """
         if isinstance(attrs, list) and all(isinstance(x, str) for x in attrs):
             return {k: self.__dict__[k] for k in attrs if k in self.__dict__}
         return self.__dict__
