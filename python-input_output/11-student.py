@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Remplace les attributs de l'instance par ceux du dictionnaire json"""
+Remplace les attributs de l'instance par ceux du dictionnaire json
+"""
 
 
 class Student:
