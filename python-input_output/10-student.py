@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-***
+Module définissant la classe Student
+avec des méthodes pour obtenir une représentation JSON.
 """
 
 
@@ -17,4 +18,3 @@ class Student:
         if isinstance(attrs, list) and all(isinstance(x, str) for x in attrs):
             return {k: self.__dict__[k] for k in attrs if k in self.__dict__}
         return self.__dict__
-
