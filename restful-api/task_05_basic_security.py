@@ -39,12 +39,16 @@ def login():
     username = data.get("username")
     password = data.get("password")
 
-    if username not in users or not check_password_hash(users[username]["password"], password):
+    if username not in users or not check_password_hash(users[username]
+                                                        ["password"],
+                                                        password):
         return jsonify({"error": "Invalid credentials"}), 401
 
     # Créer le token en ajoutant le rôle dans le payload
-    access_token = create_access_token(identity={"username": username, "role": users[username]["role"]})
+    access_token = create_access_token(identity={"username": username, "role":
+                                                users[username]["role"]})
     return jsonify({"access_token": access_token}), 200
+
 
 @app.route('/admin-only', methods=['GET'])
 @jwt_required()
@@ -53,7 +57,6 @@ def admin_only():
     if current_user["role"] != "admin":
         return jsonify({"error": "Admin access required"}), 403
     return jsonify({"message": "Admin Access: Granted"}), 200
-
 
 
 @app.route('/jwt-protected', methods=['GET'])
@@ -79,9 +82,11 @@ def unauthorized():
 def handle_unauthorized_error(err):
     return jsonify({"error": "Missing or invalid token"}), 401
 
+
 @jwt.invalid_token_loader
 def handle_invalid_token_error(err):
     return jsonify({"error": "Invalid token"}), 401
+
 
 @jwt.expired_token_loader
 def handle_expired_token_error(jwt_header, jwt_payload):
