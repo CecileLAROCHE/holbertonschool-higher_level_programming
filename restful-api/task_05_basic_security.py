@@ -71,7 +71,8 @@ def verify_password(username, password):
 
 @auth.error_handler
 def unauthorized():
-    return jsonify({"error": "Unauthorized"}), 401
+    return jsonify({"error": "Unauthorized"}),
+    401
 
 
 @jwt.unauthorized_loader
