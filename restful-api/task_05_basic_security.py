@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from flask import Flask, Blueprint, jsonify
+from flask import Flask, jsonify
 from flask_httpauth import HTTPBasicAuth
 from werkzeug.security import generate_password_hash, check_password_hash
 
@@ -33,6 +33,11 @@ def verify_password(username, password):
     if username in users and check_password_hash(users[username]["password"], password):
         return username
     return None
+
+
+@auth.error_handler
+def unauthorized():
+    return jsonify({"error": "Unauthorized"}), 401
 
 
 if __name__ == "__main__":
