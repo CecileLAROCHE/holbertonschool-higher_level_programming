@@ -7,7 +7,6 @@ import json
 import http.server
 
 
-# appele du serveur
 class SimpleAPIHandler(http.server.BaseHTTPRequestHandler):
     def do_GET(self):
         if self.path == "/":
@@ -23,13 +22,11 @@ class SimpleAPIHandler(http.server.BaseHTTPRequestHandler):
             data = {"name": "John", "age": 30, "city": "New York"}
             json_data = json.dumps(data)
             self.wfile.write(json_data.encode())
-
         elif self.path == "/status":
             self.send_response(200)
             self.send_header("Content-type", "text/plain")
             self.end_headers()
             self.wfile.write(b"OK")
-
         else:
             self.send_response(404)
             self.send_header("Content-type", "text/plain")
