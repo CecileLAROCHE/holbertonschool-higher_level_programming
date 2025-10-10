@@ -27,10 +27,10 @@ users = {
 auth = HTTPBasicAuth()
 
 
-@app.route('/basic-protected')
+"""@app.route('/basic-protected')
 @auth.login_required
 def basic_protected():
-    return jsonify({"message": "Basic Auth: Access Granted"})
+    return jsonify({"message": "Basic Auth: Access Granted"})"""
 
 
 @app.route('/login', methods=['POST'])
@@ -57,6 +57,15 @@ def admin_only():
     if current_user["role"] != "admin":
         return jsonify({"error": "Admin access required"}), 403
     return jsonify({"message": "Admin Access: Granted"}), 200
+
+
+@app.route('/user-only', methods=['GET'])
+@jwt_required()
+def user_only():
+    current_user = get_jwt_identity()
+    if current_user["role"] != "user":
+        return jsonify({"error": "User access required"}), 403
+    return jsonify({"message": "User Access: Granted"}), 200
 
 
 @app.route('/jwt-protected', methods=['GET'])
@@ -90,6 +99,16 @@ def handle_invalid_token_error(err):
 @jwt.expired_token_loader
 def handle_expired_token_error(jwt_header, jwt_payload):
     return jsonify({"error": "Token has expired"}), 401
+
+
+@app.route('/basic-protected', methods=['GET'])
+@jwt_required()
+def basic_protected():
+    current_user = get_jwt_identity()
+    return jsonify({
+        "message": "Access granted",
+        "user": current_user
+    }), 200
 
 
 if __name__ == "__main__":
