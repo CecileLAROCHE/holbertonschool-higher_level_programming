@@ -46,10 +46,10 @@ def login():
     data = request.get_json()
     username = data.get("username")
     password = data.get("password")
-
     user = users.get(username)
     if user and check_password_hash(user["password"], password):
-        access_token = create_access_token(identity={"username": username, "role": user["role"]})
+        access_token = create_access_token(identity={
+            "username": username, "role": user["role"]})
         return jsonify(access_token=access_token)
 
     return jsonify({"error": "Invalid credentials"}), 401
