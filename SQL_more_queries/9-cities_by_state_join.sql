@@ -1,5 +1,4 @@
---- 
-USE hbtn_0d_usa;
+--- script that list all cities with states name
 
 SELECT cities.id, cities.name, states.name
 FROM cities
