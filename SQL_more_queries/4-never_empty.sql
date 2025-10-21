@@ -1,5 +1,5 @@
--- This script will create database
+-- This script will create database 
 CREATE TABLE IF NOT EXISTS id_not_null (
-    id INT DEFAULT 0,
+    id INT DEFAULT 1,
     name VARCHAR(256)
 );
