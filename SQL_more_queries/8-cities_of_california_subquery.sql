@@ -7,4 +7,3 @@ WHERE state_id =
     FROM states 
     WHERE name = 'California'
 )
-ORDER BY cities ASC;
