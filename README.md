@@ -27,3 +27,5 @@
 ## Python - Serialization
 
 ## RESTful API
+
+## SQL - More queries
