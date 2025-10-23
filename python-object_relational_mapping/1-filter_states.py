@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 Script qui se connecte à une base MySQL et affiche toutes les lignes
-de la table 'states' triées par id (ordre croissant).
+de la table 'states' dont le nom commence par 'N', triées par id croissant.
 """
 
 import MySQLdb
@@ -25,7 +25,8 @@ if __name__ == "__main__":
     # Création du curseur
     cursor = db.cursor()
 
-    # Exécution de la requête pour récupérer tous les états triés par id
+    # Exécution de la requête pour récupérer tous les états commençant
+    # par N triés par id
     cursor.execute(
         "SELECT id, name FROM states "
         "WHERE name LIKE 'N%' "
