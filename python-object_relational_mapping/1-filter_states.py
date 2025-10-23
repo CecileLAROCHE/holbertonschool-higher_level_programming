@@ -29,7 +29,7 @@ if __name__ == "__main__":
     # par N triés par id
     cursor.execute(
         "SELECT id, name FROM states "
-        "WHERE name LIKE 'N%' "
+        "WHERE name LIKE BINARY 'N%' "
         "ORDER BY id ASC;"
     )
 
