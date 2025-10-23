@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-Script qui se connecte à une base MySQL et affiche toutes les lignes
-de la table 'states' dont le nom commence par 'N', triées par id croissant.
+Script qui se connecte à une base MySQL et affiche la ligne correspondante
+à l'état rechercher
 """
 
 import MySQLdb
