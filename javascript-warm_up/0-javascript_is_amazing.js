@@ -1,5 +1,3 @@
-// Create a constant variable with the required value
+#!/usr/bin/node
 const myVar = "JavaScript is amazing";
-
-// Print the value using console.log
 console.log(myVar);
