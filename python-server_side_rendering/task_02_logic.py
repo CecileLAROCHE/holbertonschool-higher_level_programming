@@ -4,6 +4,7 @@ import json
 
 app = Flask(__name__)
 
+
 @app.route('/items')
 def items_list():
     """Route that reads items from JSON and renders the template"""
